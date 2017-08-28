@@ -116,9 +116,9 @@ public class Operaciones {
             default:
                 System.out.println("diferente: " + cas);
         }
-        
+  //Problema del dado      
         int [] vector = new int[11];
-        final int veces=1000000;
+        final int veces=10000000;
         int i=0;
         int fmax,rmax;
         try {

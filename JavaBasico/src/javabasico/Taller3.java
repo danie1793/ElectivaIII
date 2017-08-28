@@ -16,7 +16,7 @@ public class Taller3 {
         int dado1=0,dado2=0, suma=0;
         int [] vi = new int[12];
         Random r = new Random();
-        for(int i =0 ; i<1000000; i++)
+        for(int i =0 ; i<10000000; i++)
         {
            dado1 = r.nextInt(6)+1;
            dado2 = r.nextInt(6)+1;
