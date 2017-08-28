@@ -5,6 +5,7 @@
  */
 package javabasico;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
 
 /**
@@ -112,6 +113,30 @@ public class Operaciones {
             default:
                 System.out.println("diferente: " + cas);
         }
+        
+        int [] vector = new int[12];
+         int i=0,dado1=0,dado2=0,suma=0;
+         
+        SecureRandom numAle= new SecureRandom();
+        
+        for(i=0;i<1000000;i++)
+        {
+            dado1=numAle.nextInt(6)+1;
+            dado2=numAle.nextInt(6)+1;
+            suma=dado1+dado2;
+            vector[suma-1]+=1;
+            
+        }
+        
+        
+        
+        for(int x=0;x<vector.length; x++)
+        {
+            
+            System.out.println("\nPosicion: "+(x+1)+" valor: "+vector[x]);
+        }
+        
+        
     }
 
 }
