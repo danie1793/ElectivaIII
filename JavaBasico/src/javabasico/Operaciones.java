@@ -5,8 +5,11 @@
  */
 package javabasico;
 
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -115,26 +118,19 @@ public class Operaciones {
         }
         
         int [] vector = new int[12];
-         int i=0,dado1=0,dado2=0,suma=0;
-         
-        SecureRandom numAle= new SecureRandom();
-        
-        for(i=0;i<1000000;i++)
-        {
-            dado1=numAle.nextInt(6)+1;
-            dado2=numAle.nextInt(6)+1;
-            suma=dado1+dado2;
-            vector[suma-1]+=1;
-            
+        final int veces=1000000;
+        int i=0;
+        try {
+            SecureRandom r = SecureRandom.getInstance("SHA1PRNG");
+            for(i=0;i<veces;i++)
+            {
+                
+            }
+        } catch (NoSuchAlgorithmException ex) {
+            System.out.println("Error "+ Operaciones.class.getName() + "\n"+ ex.getMessage());
         }
         
-        
-        
-        for(int x=0;x<vector.length; x++)
-        {
-            
-            System.out.println("\nPosicion: "+(x+1)+" valor: "+vector[x]);
-        }
+
         
         
     }
