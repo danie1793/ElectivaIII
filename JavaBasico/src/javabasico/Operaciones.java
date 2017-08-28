@@ -117,18 +117,35 @@ public class Operaciones {
                 System.out.println("diferente: " + cas);
         }
         
-        int [] vector = new int[12];
+        int [] vector = new int[11];
         final int veces=1000000;
         int i=0;
+        int fmax,rmax;
         try {
             SecureRandom r = SecureRandom.getInstance("SHA1PRNG");
             for(i=0;i<veces;i++)
             {
-                
+                ++vector[r.nextInt(6)+r.nextInt(6)];
+
             }
+            fmax=vector[0];
+            rmax=2;
+            System.out.printf("%s%12s%n", "dado", "frecuencia");
+            for(i=0;i<vector.length;i++)
+                {
+                    System.out.printf("%d%12d%n",i+2,vector[i] );
+                    if(vector[i]>fmax)
+                    {
+                        fmax=vector[i];
+                        rmax=i+2;
+                    }
+                }
+            System.out.println("el numero que mas cae es: "+rmax+" con una frecuencia de: "+fmax);
         } catch (NoSuchAlgorithmException ex) {
             System.out.println("Error "+ Operaciones.class.getName() + "\n"+ ex.getMessage());
         }
+        
+        
         
 
         
