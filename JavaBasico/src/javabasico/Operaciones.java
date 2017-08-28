@@ -144,12 +144,11 @@ public class Operaciones {
         } catch (NoSuchAlgorithmException ex) {
             System.out.println("Error "+ Operaciones.class.getName() + "\n"+ ex.getMessage());
         }
-        
-        
-        
-
-        
-        
+ // for each  en java     
+        int [] vec = {86,68,3,52,8,12};
+        for(int num:vec){
+            System.out.println("valor: "+num);
+        }
     }
 
 }
