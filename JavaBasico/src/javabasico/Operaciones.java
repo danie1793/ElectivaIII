@@ -149,6 +149,7 @@ public class Operaciones {
         for(int num:vec){
             System.out.println("valor: "+num);
         }
+        
     }
 
 }
